@@ -17,18 +17,37 @@ class _TextPageState extends State<TextPage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(
-          'qweqwewqewqeqwewqewqqweqweqwewqwesdsadqeqwesadsadwasewqewewgtregterwtewrqwewqdqwerdqweqw',
-          textAlign: TextAlign.center,
-          maxLines: 3,
-          overflow: TextOverflow.ellipsis,//省略部分已...代替
-          style: TextStyle(
-            fontSize: 20.0,
-            color: Color.fromARGB(255, 255, 0, 0),
-            decoration: TextDecoration.underline,
-            decorationStyle: TextDecorationStyle.solid,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+            'qweqwewqewqeqwewqewqqweqweqwewqwesdsadqeqwesadsadwasewqewewgtregterwtewrqwewqdqwerdqweqw',
+            textAlign: TextAlign.center,
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,//省略部分已...代替
+            style: TextStyle(
+              fontSize: 20.0,
+              color: Color.fromARGB(255, 255, 0, 0),
+              decoration: TextDecoration.underline,
+              decorationStyle: TextDecorationStyle.solid,
+            ),
           ),
+            Text('this is a text')
+          ],
         ),
+
+        // child: Text(
+        //   'qweqwewqewqeqwewqewqqweqweqwewqwesdsadqeqwesadsadwasewqewewgtregterwtewrqwewqdqwerdqweqw',
+        //   textAlign: TextAlign.center,
+        //   maxLines: 3,
+        //   overflow: TextOverflow.ellipsis,//省略部分已...代替
+        //   style: TextStyle(
+        //     fontSize: 20.0,
+        //     color: Color.fromARGB(255, 255, 0, 0),
+        //     decoration: TextDecoration.underline,
+        //     decorationStyle: TextDecorationStyle.solid,
+        //   ),
+        // ),
       ),
     );
   }
