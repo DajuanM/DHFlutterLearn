@@ -5,7 +5,13 @@ import 'ImageDemo.dart';
 import 'ListViewDemo.dart';
 import 'ListViewDemoh.dart';
 import 'ListViewDemod.dart';
+import 'GridViewDemo.dart';
+import 'RowWidgetDemo.dart';
+import 'StackWidgetDemo.dart';
+import 'CardWidgetDemo.dart';
+import 'PlatformChannelDemo.dart';
 
+// void main() => runApp(MaterialApp(home: AcardWidgetPage()));
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -19,7 +25,12 @@ class MyApp extends StatelessWidget {
         // home: ImagePage(),
         // home: ListViewPage(),
         // home: ListViewPageh(),
-        home: ListViewPaged(),
+        // home: ListViewPaged(),
+        // home: GridViewPage(),
+        // home: ArowPage(),
+        // home: StackWidgetPage(),
+        // home: AcardWidgetPage(),
+        home: PlatformChannelPage(),
       );
     }
 }
