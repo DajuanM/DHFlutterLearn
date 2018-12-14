@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
         // home: ListViewPageh(),
         // home: ListViewPaged(),
         // home: GridViewPage(),
-        // home: ArowPage(),
+        home: ArowPage(),
         // home: StackWidgetPage(),
         // home: AcardWidgetPage(),
-        home: PlatformChannelPage(),
+        // home: PlatformChannelPage(),
       );
     }
 }
