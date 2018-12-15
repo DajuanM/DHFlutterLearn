@@ -9,8 +9,8 @@ class TabPage extends StatefulWidget {
 
 class _TabPageState extends State<TabPage> {
 
-  var _currentIndex = 0;
-  var _pageArr = [HomePage(), RankPage()];
+  int _currentIndex = 0;
+  List<StatefulWidget> _pageArr = [HomePage(), RankPage()];
 
   @override
     Widget build(BuildContext context) {
@@ -29,11 +29,11 @@ class _TabPageState extends State<TabPage> {
           items: <BottomNavigationBarItem>[
             BottomNavigationBarItem(
               icon: Icon(Icons.ac_unit),
-              title: Text('首页')
+              title: Text('Hot')
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.access_alarms),
-              title: Text('个人中心')
+              title: Text('Rank')
             )
           ],
         )
