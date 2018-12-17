@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'TabPage.dart';
+import 'MoviePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -22,6 +23,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: TabPage(),
+      routes: <String, WidgetBuilder> {
+        'moviePage': (BuildContext context) => MoviePage(),
+      },
     );
   }
 }

@@ -46,7 +46,12 @@ class _HomePageState extends State<HomePage> {
               physics: physics,
               itemCount: data.length,
               itemBuilder: (context, index) {
-                return createTile(index);
+                return GestureDetector(
+                  onTap: (){
+                    Navigator.of(context).pushNamed('moviePage');
+                  },
+                  child: createTile(index),
+                );
               },
             );
           },
@@ -87,7 +92,7 @@ class _HomePageState extends State<HomePage> {
     var countStr = '';
     int realCount = item['collect_count'];
     if (realCount > 10000) {
-      count = realCount ~/ 10000;
+      count = realCount ~/ 10000; //取整
       countStr = '${count}万';
     }else {
       count = realCount;
