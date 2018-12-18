@@ -17,13 +17,19 @@ class _MoviePageState extends State<MoviePage> {
                   children: <Widget>[
                     Container(
                       color: Colors.brown,
-                      child: Center(
-                        child: Image.network(
-                          'https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p32853.jpg',
+                      child: SafeArea(
+                        bottom: false,
+                        child: Container(
+                          margin: EdgeInsets.only(top: 64),
+                          child: Center(
+                            child: Image.network(
+                            'https://img3.doubanio.com/view/celebrity/s_ratio_celebrity/public/p32853.jpg',
+                          ),
+                          ),
                         ),
                       ),
                       height: 450,
-                    )
+                    ),
                   ],
                 )
               ),
