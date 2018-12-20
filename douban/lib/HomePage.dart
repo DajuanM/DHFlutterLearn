@@ -135,7 +135,7 @@ class _HomePageState extends State<HomePage> {
               children: <Widget>[
                 Text('${countStr}人看过', style: TextStyle(color: Colors.red, fontSize: 13)),
                 Container(
-                  margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+                  margin: EdgeInsets.only(top: 10),
                   padding: EdgeInsets.all(2),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
