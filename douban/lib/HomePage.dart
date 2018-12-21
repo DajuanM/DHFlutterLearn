@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:flutter_refresh/flutter_refresh.dart';
+import 'MoviePage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -48,7 +49,13 @@ class _HomePageState extends State<HomePage> {
               itemBuilder: (context, index) {
                 return GestureDetector(
                   onTap: (){
-                    Navigator.of(context).pushNamed('moviePage');
+                    // Navigator.of(context).pushNamed('moviePage');
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (context) => MoviePage(url: '${data[index]['id']}',),
+                      ),
+                    );
                   },
                   child: createTile(index),
                 );
