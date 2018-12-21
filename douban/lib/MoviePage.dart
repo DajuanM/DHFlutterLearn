@@ -26,10 +26,10 @@ class _MoviePageState extends State<MoviePage> {
           setState(() {
               if (offset < 0) {
                 alpha = 0;
-              }else if (offset >= 450) {
+              }else if (offset >= 450-(54+MediaQuery.of(context).padding.top)) {
                 alpha = 1;
               }else {
-                alpha = (offset / 450.0);
+                alpha = (offset / (450.0-(54+MediaQuery.of(context).padding.top)));
               }
           });
         }
@@ -78,7 +78,7 @@ class _MoviePageState extends State<MoviePage> {
                   ],
                 ),
               ),
-              height: 44+MediaQuery.of(context).padding.top,
+              height: 54+MediaQuery.of(context).padding.top,
             ),
           ],
         ),
@@ -120,7 +120,7 @@ class _MoviePageState extends State<MoviePage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
                               Text('${data['alt_title']}', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                              Text('${data['attrs']['year'][0]} / 美国 / 澳大利亚 / 动作'),
+                              Text('${data['attrs']['year'][0]} / ${data['attrs']['country'][0]}'),
                               Text('原名： ${data['title']}'),
                               Text('上映时间：${data['attrs']['pubdate'][0]}'),
                               Text('片长：${data['attrs']['movie_duration']}')
@@ -186,9 +186,12 @@ class _MoviePageState extends State<MoviePage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text('电影简介', style: TextStyle(fontSize: 13, color: Colors.grey),),
-                        Text(
-                          '${data['summary']}',
-                          style: TextStyle(fontSize: 15),
+                        Container(
+                          margin: EdgeInsets.only(top: 10),
+                          child: Text(
+                            '${data['summary']}',
+                            style: TextStyle(fontSize: 15),
+                          ),
                         )
                       ],
                     ),
