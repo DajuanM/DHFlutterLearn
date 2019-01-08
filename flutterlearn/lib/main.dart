@@ -11,6 +11,7 @@ import 'StackWidgetDemo.dart';
 import 'CardWidgetDemo.dart';
 import 'PlatformChannelDemo.dart';
 import 'p21/ProductList.dart';
+import 'p23/PageA.dart';
 
 // void main() => runApp(MaterialApp(home: AcardWidgetPage()));
 void main() => runApp(MyApp());
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         // home: StackWidgetPage(),
         // home: AcardWidgetPage(),
         // home: PlatformChannelPage(),
-        home: ProductList(),
+        // home: ProductList(),
+        home: PageA(),
       );
     }
 }

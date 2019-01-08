@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'Product.dart';
+import 'ProductDetail.dart';
 
 class ProductList extends StatelessWidget {
   
@@ -14,7 +15,11 @@ class ProductList extends StatelessWidget {
         itemBuilder: (context, index) {
           return ListTile(
             title: Text(products[index].title),
-            onTap: (){},
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context)=>ProductDetail(product: products[index])
+              ));
+            },
           );
         },
       ),
