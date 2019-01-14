@@ -12,6 +12,7 @@ import 'CardWidgetDemo.dart';
 import 'PlatformChannelDemo.dart';
 import 'p21/ProductList.dart';
 import 'p23/PageA.dart';
+import 'p24/LocalImageDemo.dart';
 
 // void main() => runApp(MaterialApp(home: AcardWidgetPage()));
 void main() => runApp(MyApp());
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         // home: AcardWidgetPage(),
         // home: PlatformChannelPage(),
         // home: ProductList(),
-        home: PageA(),
+        // home: PageA(),
+        home: LocalImageDemo(),
       );
     }
 }
